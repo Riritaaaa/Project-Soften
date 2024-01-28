@@ -1,7 +1,7 @@
 version: '3'
 services:
   mysql:
-    container_name: some-mysql
+    container_name: test
     image: mysql:5.7
     restart: unless-stopped
     environment:
@@ -20,7 +20,7 @@ services:
     ports:
       - 8080:80
     environment:
-      DB_SERVER: some-mysql
+      DB_SERVER: test
       DB_NAME: prestashop
       DB_USER: root
       DB_PASSWD: admin
